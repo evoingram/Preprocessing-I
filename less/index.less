@@ -162,11 +162,12 @@ body {
 	background-color: @colorGray;
 	color: @colorNavy;
 	flex-direction: column;
+	width: 45%;
 	justify-content: space-between;
 }
 
 .width100 {
-	width: 100;
+	width: 100%;
 }
 
 .gradientHeader {
@@ -210,43 +211,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	width: 95%;
-	flex-wrap: wrap;
-}
-
-@media (max-width: 500px) {
-	.headerRow {
-		.mobile;
-	}
-
-	.line3 {
-		padding-left: 30%;
-	}
-
-	h1 {
-		.width100;
-	}
-
-	span {
-		.width100;
-	}
-
-	.heading {
-		width: 95%;
-	}
-
-	.stars {
-		width: 95%;
-	}
-
-	.panel {
-		.mobile;
-		margin: 2%;
-	}
-
-	ul {
-		list-style-type: square;
-		margin-left: 8%;
-	}
+	margin-left: 2%;
+	justify-content: center;
 }
 
 h1 {
@@ -292,6 +258,7 @@ h1 {
 	display: flex;
 	.width100;
 	flex-direction: column;
+	background-color: @colorNavy;
 }
 
 .headerRow {
@@ -307,12 +274,14 @@ h1 {
 }
 
 section {
-	.width100;
+	width: 100%;
 	display: flex;
 }
 
 .content {
-	.backgroundGrayTextNavy;
+	.backgroundNavyTextGray;
+	flex-direction: column;
+	width: 100%;
 }
 
 .contact {
@@ -371,15 +340,7 @@ li {
 
 .education {
 	margin-bottom: 2%;
-	order: 2;
-	.width100;
-	.contentPanelSettings;
-}
-
-.hobbies {
-	.width100;
-	order: 3;
-	flex-wrap: wrap;
+	width: 45%;
 	.contentPanelSettings;
 }
 
@@ -491,7 +452,7 @@ ul {
 	margin-left: 5%;
 }
 
-button {
+.button {
 	display: flex;
 	justify-content: center;
 	align-self: center;
@@ -554,5 +515,44 @@ span {
 
 	100% {
 		opacity: 1;
+	}
+}
+
+@media (max-width: 500px) {
+	.headerRow {
+		.mobile;
+	}
+
+	.line3 {
+		padding-left: 30%;
+	}
+
+	h1 {
+		.width100;
+	}
+
+	span {
+		.width100;
+	}
+
+	.heading {
+		width: 95%;
+	}
+
+	.stars {
+		width: 95%;
+	}
+
+	.panel {
+		.mobile;
+		padding: 0 1% 1%;
+		margin-bottom: 5%;
+		margin-left: 3%;
+		margin-right: 3%;
+	}
+
+	ul {
+		list-style-type: square;
+		margin-left: 8%;
 	}
 }
