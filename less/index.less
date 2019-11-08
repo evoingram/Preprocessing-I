@@ -180,8 +180,7 @@ body {
 }
 
 .paddingTopBottom {
-	padding-top: 2%;
-	padding-bottom: 2%;
+	padding: 2% 0 2% 0;
 }
 
 .keyframeSettings {
@@ -211,7 +210,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	width: 95%;
-	margin-left: 2%;
+	margin: 0 0 0 2%;
 	justify-content: center;
 }
 
@@ -220,57 +219,56 @@ h1 {
 }
 
 .heading {
-	margin-top: 5%;
-	margin-right: 0%;
+	margin: 5% 0% 0 0;
 	width: 75%;
 	overflow-y: hidden;
 }
 
 .line1 {
 	padding-left: 5%;
-	.width100;
+	.width100();
 	float: left;
-	.sharedAnimation;
+	.sharedAnimation();
 }
 
 .liAnimation {
 	transform: translateY(0);
-	.sharedAnimation;
+	.sharedAnimation();
 }
 
 .line2 {
-	.width100;
+	.width100();
 	padding-left: 15%;
 	float: left;
-	.sharedAnimation;
+	.sharedAnimation();
 	animation-delay: 1s;
 }
 
 .line3 {
-	.width100;
+	.width100();
 	float: left;
 	padding-left: 40%;
-	.sharedAnimation;
+	.sharedAnimation();
 	animation-delay: 3s;
 }
 
 .container {
 	display: flex;
-	.width100;
+	.width100();
 	flex-direction: column;
 	background-color: @colorNavy;
 }
 
 .headerRow {
 	flex-direction: row;
-	.fullWidthFlexCenter;
+	.fullWidthFlexCenter();
 	margin: 0%;
 	padding: 0%;
 }
 
 .row {
-	.backgroundNavyTextGray;
-	.paddingTopBottom;
+	.backgroundNavyTextGray();
+	.paddingTopBottom();
 }
 
 section {
@@ -279,21 +277,21 @@ section {
 }
 
 .content {
-	.backgroundNavyTextGray;
+	.backgroundNavyTextGray();
 	flex-direction: column;
 	width: 100%;
 }
 
 .contact {
 	margin: 0;
-	.paddingTopBottom;
+	.paddingTopBottom();
 	font-size: 22px;
-	.fullWidthFlexCenter;
-	.backgroundNavyTextGray;
+	.fullWidthFlexCenter();
+	.backgroundNavyTextGray();
 }
 
 .contact a {
-	.backgroundNavyTextGray;
+	.backgroundNavyTextGray();
 	text-decoration: none;
 	font-weight: bold;
 }
@@ -315,41 +313,40 @@ p {
 }
 
 li {
-	margin-left: 4%;
-	margin-top: 4%;
+	margin: 4% 0 0 4%;
 	font-family: 'Gloria Hallelujah', cursive;
 }
 
 .intro {
 	display: flex;
-	margin-right: 2%;
+	margin-right: 0 2% 0 0;
 	width: 45%;
-	.contentPanelSettings;
+	.contentPanelSettings();
 }
 
 .skills {
 	width: 45%;
-	.contentPanelSettings;
+	.contentPanelSettings();
 }
 
 .workHistory {
-	margin-right: 2%;
+	margin: 0 2% 0 0;
 	width: 45%;
-	.contentPanelSettings;
+	.contentPanelSettings();
 }
 
 .education {
-	margin-bottom: 2%;
+	margin: 0 0 2% 0;
 	width: 45%;
-	.contentPanelSettings;
+	.contentPanelSettings();
 }
 
 .portfolio {
 	margin: 0;
 	.paddingTopBottom;
 	font-size: 22px;
-	.fullWidthFlexCenter;
-	.backgroundNavyTextGray;
+	.fullWidthFlexCenter();
+	.backgroundNavyTextGray();
 }
 
 .portfolio a {
@@ -457,16 +454,16 @@ ul {
 	justify-content: center;
 	align-self: center;
 	width: 30%;
-	.paddingTopBottom;
+	.paddingTopBottom();
 	border: 2px solid @colorNavy;
-	.backgroundGrayTextNavy;
+	.backgroundGrayTextNavy();
 	margin: 0 auto;
 	margin-bottom: 2%;
 	margin-top: 2%;
 }
 
 span {
-	.fullWidthFlexCenter;
+	.fullWidthFlexCenter();
 	align-self: center;
 	margin: 0 auto;
 }
@@ -480,15 +477,15 @@ span {
 	}
 
 	20% {
-		.keyframeSettings;
+		.keyframeSettings();
 	}
 
 	80% {
-		.keyframeSettings;
+		.keyframeSettings();
 	}
 
 	100% {
-		.keyframeSettings;
+		.keyframeSettings();
 	}
 }
 
@@ -520,7 +517,7 @@ span {
 
 @media (max-width: 500px) {
 	.headerRow {
-		.mobile;
+		.mobile();
 	}
 
 	.line3 {
@@ -528,11 +525,11 @@ span {
 	}
 
 	h1 {
-		.width100;
+		.width100();
 	}
 
 	span {
-		.width100;
+		.width100();
 	}
 
 	.heading {
@@ -546,13 +543,11 @@ span {
 	.panel {
 		.mobile;
 		padding: 0 1% 1%;
-		margin-bottom: 5%;
-		margin-left: 3%;
-		margin-right: 3%;
+		margin: 0 3% 5% 3%;
 	}
 
 	ul {
 		list-style-type: square;
-		margin-left: 8%;
+		margin: 0 0 0 8%;
 	}
 }
