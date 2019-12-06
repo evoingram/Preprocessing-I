@@ -109,7 +109,8 @@ body {
 }
 ol,
 ul {
-  list-style: none;
+  list-style-type: square;
+  margin-left: 5%;
 }
 blockquote,
 q {
@@ -196,6 +197,7 @@ h1 {
   margin: 5% 0% 0 0;
   width: 75%;
   overflow-y: hidden;
+  flex-wrap: wrap;
 }
 .line1 {
   padding-left: 5%;
@@ -238,7 +240,7 @@ h1 {
   animation-timing-function: ease;
   animation-duration: 3s;
   animation-fill-mode: forwards;
-  animation-delay: 3s;
+  animation-delay: 2s;
 }
 .container {
   display: flex;
@@ -302,14 +304,65 @@ li {
   margin: 4% 0 0 4%;
   font-family: 'Gloria Hallelujah', cursive;
 }
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+}
+.portfolio p {
+  text-align: center;
+  margin-bottom: 3%;
+  width: 95%;
+}
+.portfolio #leftHalf {
+  line-height: 2;
+}
+.portfolio #leftHalf ul {
+  width: 80%;
+}
+.portfolio #leftHalf a {
+  color: #69be28;
+}
+.portfolio #leftHalf .devdetails {
+  display: flex;
+  width: 75%;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+.portfolio #leftHalf .devdetails .codeItem {
+  padding-left: 3%;
+  padding-right: 3%;
+}
 .intro {
   display: flex;
-  margin-right: 0 2% 0 0;
+  margin: 0 2% 0 0;
+  justify-content: center;
   background-color: #a5acaf;
   color: #002244;
   flex-direction: column;
   width: 45%;
   justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.intro #heading {
+  width: 100%;
+  justify-content: center;
+}
+.intro #heading p {
+  text-align: center;
+}
+.intro .introP {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 100%;
+  width: 98%;
+  margin: 0;
+  padding: 3%;
+}
+.intro .introP .introPcontainer {
+  display: flex;
+  align-items: center;
 }
 .skills {
   background-color: #a5acaf;
@@ -319,15 +372,16 @@ li {
   justify-content: space-between;
 }
 .workHistory {
+  display: flex;
   margin: 0 2% 0 0;
   background-color: #a5acaf;
   color: #002244;
   flex-direction: column;
   width: 45%;
   justify-content: space-between;
+  justify-content: center;
 }
 .education {
-  margin: 0 0 2% 0;
   background-color: #a5acaf;
   color: #002244;
   flex-direction: column;
@@ -429,10 +483,6 @@ li {
 .row5 {
   animation-delay: 1s;
 }
-ul {
-  list-style-type: square;
-  margin-left: 5%;
-}
 .button {
   display: flex;
   justify-content: center;
@@ -452,6 +502,27 @@ span {
   justify-content: center;
   align-self: center;
   margin: 0 auto;
+}
+.panel {
+  display: flex;
+  padding-bottom: 3%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.panel ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-right: 6%;
+}
+.panel ul li {
+  width: 100%;
+}
+#constructionFooter {
+  width: 70%;
+  margin-top: 3%;
+  border-top: 3px solid #69be28;
 }
 @keyframes titleAnimation {
   0% {
@@ -500,15 +571,9 @@ span {
   }
 }
 @media (max-width: 500px) {
-  .headerRow {
-    display: flex;
-    flex-direction: column;
-    width: 95%;
-    margin: 0 0 0 2%;
-    justify-content: center;
-  }
+  overflow-x: hidden;
   .line3 {
-    padding-left: 30%;
+    padding-left: 28%;
   }
   h1 {
     width: 100%;
@@ -517,7 +582,9 @@ span {
     width: 100%;
   }
   .heading {
-    width: 95%;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-bottom: 1%;
   }
   .stars {
     width: 95%;
@@ -530,6 +597,17 @@ span {
     justify-content: center;
     padding: 0 1% 1%;
     margin: 0 3% 5% 3%;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .headerRow {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 0 0 0 2%;
+    justify-content: center;
+    width: 90%;
+    flex-wrap: wrap;
   }
   ul {
     list-style-type: square;

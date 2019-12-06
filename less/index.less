@@ -114,7 +114,8 @@ body {
 
 ol,
 ul {
-	list-style: none;
+	list-style-type: square;
+	margin-left: 5%;
 }
 
 blockquote,
@@ -222,6 +223,7 @@ h1 {
 	margin: 5% 0% 0 0;
 	width: 75%;
 	overflow-y: hidden;
+	flex-wrap: wrap;
 }
 
 .line1 {
@@ -249,7 +251,7 @@ h1 {
 	float: left;
 	padding-left: 40%;
 	.sharedAnimation();
-	animation-delay: 3s;
+	animation-delay: 2s;
 }
 
 .container {
@@ -317,11 +319,72 @@ li {
 	font-family: 'Gloria Hallelujah', cursive;
 }
 
+.portfolio {
+	display: flex;
+	flex-wrap: wrap;
+
+	p {
+		text-align: center;
+		margin-bottom: 3%;
+		width: 95%;
+	}
+
+	#leftHalf {
+		ul {
+			width: 80%;
+		}
+
+		line-height: 2;
+
+		a {
+			color: @colorGreen;
+		}
+
+		.devdetails {
+			display: flex;
+			width: 75%;
+			flex-wrap: nowrap;
+			justify-content: space-evenly;
+			.codeItem {
+				padding-left: 3%;
+				padding-right: 3%;
+			}
+		}
+	}
+}
+
 .intro {
 	display: flex;
-	margin-right: 0 2% 0 0;
+	margin: 0 2% 0 0;
 	width: 45%;
+	justify-content: center;
 	.contentPanelSettings();
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	#heading {
+		width: 100%;
+		justify-content: center;
+
+		p {
+			text-align: center;
+		}
+	}
+
+	.introP {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		height: 100%;
+		width: 98%;
+		margin: 0;
+		padding: 3%;
+
+		.introPcontainer {
+			display: flex;
+			align-items: center;
+		}
+	}
 }
 
 .skills {
@@ -330,13 +393,14 @@ li {
 }
 
 .workHistory {
+	display: flex;
 	margin: 0 2% 0 0;
 	width: 45%;
 	.contentPanelSettings();
+	justify-content: center;
 }
 
 .education {
-	margin: 0 0 2% 0;
 	width: 45%;
 	.contentPanelSettings();
 }
@@ -444,11 +508,6 @@ li {
 	animation-delay: 1s;
 }
 
-ul {
-	list-style-type: square;
-	margin-left: 5%;
-}
-
 .button {
 	display: flex;
 	justify-content: center;
@@ -466,6 +525,31 @@ span {
 	.fullWidthFlexCenter();
 	align-self: center;
 	margin: 0 auto;
+}
+
+.panel {
+	display: flex;
+	padding-bottom: 3%;
+	align-items: center;
+	flex-wrap: wrap;
+
+	ul {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		padding-right: 6%;
+
+		li {
+			width: 100%;
+		}
+	}
+}
+
+#constructionFooter {
+	width: 70%;
+	margin-top: 3%;
+	border-top: 3px solid @colorGreen;
 }
 
 @keyframes titleAnimation {
@@ -516,12 +600,10 @@ span {
 }
 
 @media (max-width: 500px) {
-	.headerRow {
-		.mobile();
-	}
+	overflow-x: hidden;
 
 	.line3 {
-		padding-left: 30%;
+		padding-left: 28%;
 	}
 
 	h1 {
@@ -533,7 +615,9 @@ span {
 	}
 
 	.heading {
-		width: 95%;
+		width: 100%;
+		flex-wrap: wrap;
+		padding-bottom: 1%;
 	}
 
 	.stars {
@@ -541,9 +625,17 @@ span {
 	}
 
 	.panel {
-		.mobile;
+		.mobile();
 		padding: 0 1% 1%;
 		margin: 0 3% 5% 3%;
+		width: 100%;
+		flex-wrap: wrap;
+	}
+
+	.headerRow {
+		.mobile();
+		width: 90%;
+		flex-wrap: wrap;
 	}
 
 	ul {

@@ -109,7 +109,8 @@ body {
 }
 ol,
 ul {
-  list-style: none;
+  list-style-type: square;
+  margin-left: 5%;
 }
 blockquote,
 q {
@@ -161,8 +162,7 @@ body {
   overflow-y: hidden;
 }
 .paddingTopBottom {
-  padding-top: 2%;
-  padding-bottom: 2%;
+  padding: 2% 0 2% 0;
 }
 .keyframeSettings {
   transform: translateY(0);
@@ -187,17 +187,17 @@ body {
   display: flex;
   flex-direction: column;
   width: 95%;
-  margin-left: 2%;
+  margin: 0 0 0 2%;
   justify-content: center;
 }
 h1 {
   font-size: 72px;
 }
 .heading {
-  margin-top: 5%;
-  margin-right: 0%;
+  margin: 5% 0% 0 0;
   width: 75%;
   overflow-y: hidden;
+  flex-wrap: wrap;
 }
 .line1 {
   padding-left: 5%;
@@ -240,7 +240,7 @@ h1 {
   animation-timing-function: ease;
   animation-duration: 3s;
   animation-fill-mode: forwards;
-  animation-delay: 3s;
+  animation-delay: 2s;
 }
 .container {
   display: flex;
@@ -259,8 +259,7 @@ h1 {
 .row {
   background-color: #002244;
   color: #a5acaf;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  padding: 2% 0 2% 0;
 }
 section {
   width: 100%;
@@ -274,8 +273,7 @@ section {
 }
 .contact {
   margin: 0;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  padding: 2% 0 2% 0;
   font-size: 22px;
   display: flex;
   width: 100%;
@@ -303,18 +301,68 @@ p {
   line-height: 23px;
 }
 li {
-  margin-left: 4%;
-  margin-top: 4%;
+  margin: 4% 0 0 4%;
   font-family: 'Gloria Hallelujah', cursive;
+}
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+}
+.portfolio p {
+  text-align: center;
+  margin-bottom: 3%;
+  width: 95%;
+}
+.portfolio #leftHalf {
+  line-height: 2;
+}
+.portfolio #leftHalf ul {
+  width: 80%;
+}
+.portfolio #leftHalf a {
+  color: #69be28;
+}
+.portfolio #leftHalf .devdetails {
+  display: flex;
+  width: 75%;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+.portfolio #leftHalf .devdetails .codeItem {
+  padding-left: 3%;
+  padding-right: 3%;
 }
 .intro {
   display: flex;
-  margin-right: 2%;
+  margin: 0 2% 0 0;
+  justify-content: center;
   background-color: #a5acaf;
   color: #002244;
   flex-direction: column;
   width: 45%;
   justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.intro #heading {
+  width: 100%;
+  justify-content: center;
+}
+.intro #heading p {
+  text-align: center;
+}
+.intro .introP {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 100%;
+  width: 98%;
+  margin: 0;
+  padding: 3%;
+}
+.intro .introP .introPcontainer {
+  display: flex;
+  align-items: center;
 }
 .skills {
   background-color: #a5acaf;
@@ -324,15 +372,16 @@ li {
   justify-content: space-between;
 }
 .workHistory {
-  margin-right: 2%;
+  display: flex;
+  margin: 0 2% 0 0;
   background-color: #a5acaf;
   color: #002244;
   flex-direction: column;
   width: 45%;
   justify-content: space-between;
+  justify-content: center;
 }
 .education {
-  margin-bottom: 2%;
   background-color: #a5acaf;
   color: #002244;
   flex-direction: column;
@@ -341,8 +390,7 @@ li {
 }
 .portfolio {
   margin: 0;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  padding: 2% 0 2% 0;
   font-size: 22px;
   display: flex;
   width: 100%;
@@ -435,17 +483,12 @@ li {
 .row5 {
   animation-delay: 1s;
 }
-ul {
-  list-style-type: square;
-  margin-left: 5%;
-}
 .button {
   display: flex;
   justify-content: center;
   align-self: center;
   width: 30%;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  padding: 2% 0 2% 0;
   border: 2px solid #002244;
   background-color: #a5acaf;
   color: #002244;
@@ -459,6 +502,27 @@ span {
   justify-content: center;
   align-self: center;
   margin: 0 auto;
+}
+.panel {
+  display: flex;
+  padding-bottom: 3%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.panel ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-right: 6%;
+}
+.panel ul li {
+  width: 100%;
+}
+#constructionFooter {
+  width: 70%;
+  margin-top: 3%;
+  border-top: 3px solid #69be28;
 }
 @keyframes titleAnimation {
   0% {
@@ -507,15 +571,9 @@ span {
   }
 }
 @media (max-width: 500px) {
-  .headerRow {
-    display: flex;
-    flex-direction: column;
-    width: 95%;
-    margin-left: 2%;
-    justify-content: center;
-  }
+  overflow-x: hidden;
   .line3 {
-    padding-left: 30%;
+    padding-left: 28%;
   }
   h1 {
     width: 100%;
@@ -524,7 +582,9 @@ span {
     width: 100%;
   }
   .heading {
-    width: 95%;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-bottom: 1%;
   }
   .stars {
     width: 95%;
@@ -533,15 +593,24 @@ span {
     display: flex;
     flex-direction: column;
     width: 95%;
-    margin-left: 2%;
+    margin: 0 0 0 2%;
     justify-content: center;
     padding: 0 1% 1%;
-    margin-bottom: 5%;
-    margin-left: 3%;
-    margin-right: 3%;
+    margin: 0 3% 5% 3%;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .headerRow {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 0 0 0 2%;
+    justify-content: center;
+    width: 90%;
+    flex-wrap: wrap;
   }
   ul {
     list-style-type: square;
-    margin-left: 8%;
+    margin: 0 0 0 8%;
   }
 }
